@@ -27,6 +27,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_30_015407) do
     t.bigint "author_id"
     t.string "name"
     t.float "amount"
+    t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
