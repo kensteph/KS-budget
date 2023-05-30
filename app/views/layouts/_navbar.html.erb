@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg bg-primary">
+  <div class="container-fluid">
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon "></span>
+    </button>
+    <a class="navbar-brand text-white" href="/">TRANSACTIONS</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+      </ul>
+    </div>
+    <button class="navbar-toggler border-0" type="button" >
+      <span class="navbar-toggler-icon"></span>
+      <i class="fas fa-search"></i>
+    </button>
+    <% if user_signed_in? %>
+    <%= link_to "#{current_user.name} | Sign Out", destroy_user_session_path, "data-turbo-method": :delete,  class:"nav-link"%>
+    <% else %>
+    <%= link_to "Sign In", new_user_session_path , class: "nav-link"%>
+    <% end %>
+  </div>
+</nav>
