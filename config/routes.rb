@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :categories, only: [:index, :new, :create]
   # Defines the root path route ("/")
   root "categories#index"
+  get "/splash_screen", to: "users#splash"
 end

@@ -1,5 +1,6 @@
 class CategoriesController < ApplicationController
-  
+  include AuthenticationHelper
+  before_action :authenticate_user!
   def index
     @categories = Category.where(user_id: current_user)
   end
