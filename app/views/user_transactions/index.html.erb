@@ -1,0 +1,11 @@
+<%= render "layouts/navbar", title: "TRANSACTIONS" %>
+<section class="container">
+<%= render "layouts/flash" %>
+<% @transactions.each do |transaction| %>
+    <%= render transaction %>
+<% end %>
+
+<div class="d-flex justify-content-center mt-2">
+     <%= link_to "Add new Transaction", new_user_transaction_path, class: "btn btn-success" %>
+</div>
+</section>

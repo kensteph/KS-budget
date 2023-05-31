@@ -1,0 +1,39 @@
+<%= form_with(model: transaction, url:user_transactions_path ) do |form| %>
+  <% if transaction.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(transaction.errors.count, "error") %> prohibited this transaction from being saved:</h2>
+
+      <ul>
+        <% transaction.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mb-3">
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name, required:true, class:"form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :amount, required:true, style: "display: block" %>
+    <%= form.text_field :amount, class:"form-control" %>
+  </div>
+
+  <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="example-select">Select your categories:</label>
+        <select id="example-select" required name="category" class="form-select" multiple>
+          
+          <% @categories.each do |category| %>
+          <option value="<%=category.id %>"><%=category.name %></option>
+          <% end %>
+        </select>
+      </div>
+    </div>
+
+  <div class="mb-3">
+    <%= form.submit "Add Transaction", class: "btn btn-primary" %>
+  </div>
+<% end %>

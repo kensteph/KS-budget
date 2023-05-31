@@ -24,11 +24,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_30_191107) do
   end
 
   create_table "user_transactions", force: :cascade do |t|
-    t.bigint "author_id"
+    t.bigint "category_id", null: false
+    t.bigint "author_id", null: false
     t.string "name"
     t.float "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["author_id"], name: "index_user_transactions_on_author_id"
+    t.index ["category_id"], name: "index_user_transactions_on_category_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -49,4 +52,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_30_191107) do
   end
 
   add_foreign_key "categories", "users"
+  add_foreign_key "user_transactions", "categories"
+  add_foreign_key "user_transactions", "users", column: "author_id"
 end
