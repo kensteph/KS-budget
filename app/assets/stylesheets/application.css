@@ -10,21 +10,19 @@ body {
   font-family: 'Lobster', cursive;
 }
 
-
-
 .bg {
   background-color: whitesmoke;
 }
 
 .bg-card {
-  background-color:white;
+  background-color: white;
 }
 
 .back-section {
   display: flex;
   padding: 0.5rem;
   align-items: center;
-  background-color: #3778C2;
+  background-color: #3778c2;
 }
 
 .back-section p {
@@ -33,19 +31,19 @@ body {
 }
 
 .bg-nav {
-  background-color: #3778C2;
+  background-color: #3778c2;
 }
 
 .bg-btn {
-  background-color: #5FB523;
+  background-color: #5fb523;
 }
 
 .add-btn {
   width: 100%;
   padding: 0.8rem;
   background-color: transparent;
-  border : solid 1px white;
-  color: white
+  border: solid 1px white;
+  color: white;
 }
 
 .date {
