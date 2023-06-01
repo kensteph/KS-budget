@@ -1,8 +1,8 @@
 <%= render "layouts/navbar", title:"CATEGORIES" %>
-<section class="container">
+<section class="container bg vh-100 py-3">
 <%= render "layouts/flash" %>
-<% @categories.each do |category| %>
-    <%= render category %>
+<% @categories.each_with_index do |category, i| %>
+    <%= render category, total:@totals[i] %>
 <% end %>
 
 <div class="d-flex justify-content-center mt-2">

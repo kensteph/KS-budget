@@ -1,8 +1,13 @@
 class CategoriesController < ApplicationController
   include AuthenticationHelper
   before_action :authenticate_user!
+
   def index
     @categories = Category.where(user_id: current_user)
+    @totals=[]
+    @categories.each do |category|
+      @totals << total(category.id)
+    end
   end
 
   def new
@@ -23,6 +28,10 @@ class CategoriesController < ApplicationController
 
   private
 
+  def total(cat) 
+    total_price = UserTransaction.where(author_id:current_user,category:cat).sum(:amount)
+  end
+  
   def category_params
     params.require(:category).permit(:name, :icon)
   end

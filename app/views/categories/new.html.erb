@@ -1,11 +1,5 @@
-<%= render "layouts/navbar", title: "ADD NEW CATEGORY" %>
-<section class="container mt-3">
+<%= render "layouts/back", title: "NEW CATEGORY", link: "/categories" %>
+<section class="container bg vh-100 py-3">
 <%= render "layouts/flash" %>
 <%= render "form", category: @category %>
-
-<br>
-
-<div>
-  <%= link_to "Back to categories", categories_path %>
-</div>
 </section>

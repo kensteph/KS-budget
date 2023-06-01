@@ -1,10 +1,11 @@
 <section class="container vh-100">
     <%= render "layouts/flash" %>
     <div class="d-flex flex-column justify-content-center align-items-center vh-100">
-      <h1> KS Budget </h1>
-      <div class="d-flex flex-column justify-content-center mt-5">
-      <%= link_to "Sign In", new_user_session_path , class: "btn btn-primary mb-3"%>
-      <%= link_to "Sign Up", new_user_registration_path , class: "btn btn-secondary mb-3"%>
-      </div>
+      <h1 class="mb-5 app-name"> KS Budget </h1>
+      <div class="d-grid gap-2 col-8">
+          <%= link_to "LOG IN", new_user_session_path , class: "btn btn-primary mb-3 "%>
+          <%= link_to "SIGN UP", new_user_registration_path , class: "btn  mb-3"%>
+       </div>
     </div>
+    
 </section>

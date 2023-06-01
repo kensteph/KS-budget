@@ -1,11 +1,5 @@
-<%= render "layouts/navbar", title: "NEW TRANSACTIONS" %>
-<section class="container mt-3">
+<%= render "layouts/back", title: "NEW TRANSACTION", link: category_user_transactions_path(@category_id) %>
+<section class="container bg vh-100 py-2">
 <%= render "layouts/flash" %>
 <%= render "form", transaction: @transaction %>
-
-<br>
-
-<div>
-  <%= link_to "Back to categories", categories_path %>
-</div>
 </section>
