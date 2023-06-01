@@ -85,6 +85,6 @@ test:
 production:
   <<: *default
   url: <%= ENV["DATABASE_URL"] %>
-  database: RoR_Capstone_Project_production
-  username: RoR_Capstone_Project
-  password: <%= ENV["ROR_CAPSTONE_PROJECT_DATABASE_PASSWORD"] %>
+  database: ks_budjet
+  username: ks_budjet_user
+  password: <%= ENV["DATABASE_PASSWORD"] %>
