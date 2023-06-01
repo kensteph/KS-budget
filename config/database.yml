@@ -22,7 +22,7 @@ default: &default
   #password: K@i14969
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  #pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
@@ -77,7 +77,7 @@ test:
 # URL environment variable explicitly:
 #
 #   production:
-    url: <%= ENV["DATABASE_URL"] %>
+    url: postgres://ks_budjet_user:i2SsEmZB85QZh1y4feoVZv1xlxgEuFW9@dpg-chsdk5jhp8u4o31nbimg-a/ks_budjet
 #
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
