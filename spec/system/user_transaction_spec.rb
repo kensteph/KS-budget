@@ -2,12 +2,12 @@ require 'rails_helper'
 
 RSpec.describe 'UserTransaction', type: :system do
   describe 'GET /index' do
-    let(:user) { User.create!(name: 'Roody', email: 'roody@mail.com',password:'K@i14969') }
+    let(:user) { User.create!(name: 'Roody', email: 'roody@mail.com', password: 'K@i14969') }
     let(:category) do
       Category.create!(
         name: 'Housing',
         icon: 'https://picsum.photos/300/300',
-        user: user
+        user:
       )
     end
 
@@ -16,7 +16,7 @@ RSpec.describe 'UserTransaction', type: :system do
         name: 'Curtains',
         amount: 200,
         author: user,
-        category: category
+        category:
       )
     end
 
@@ -43,5 +43,4 @@ RSpec.describe 'UserTransaction', type: :system do
       expect(page).to have_current_path("/categories/#{category.id}/user_transactions/new", ignore_query: true)
     end
   end
-
 end

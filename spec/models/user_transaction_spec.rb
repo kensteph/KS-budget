@@ -35,5 +35,4 @@ RSpec.describe UserTransaction, type: :model do
       expect(user_transaction.category_id).to eq(category.id)
     end
   end
-
 end

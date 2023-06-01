@@ -2,12 +2,12 @@ require 'rails_helper'
 
 RSpec.describe 'Categories', type: :request do
   describe 'GET /index' do
-    let(:user) { User.create!(name: 'Roody', email: 'roody@mail.com',password:'K@i14969') }
+    let(:user) { User.create!(name: 'Roody', email: 'roody@mail.com', password: 'K@i14969') }
     let(:category) do
       Category.create!(
         name: 'Housing',
         icon: 'https://picsum.photos/300/300',
-        user: user
+        user:
       )
     end
     before(:each) do
@@ -44,7 +44,7 @@ RSpec.describe 'Categories', type: :request do
   end
 
   describe 'GET/new' do
-    let(:user) { User.create!(name: 'Roody', email: 'roody@mail.com',password:'K@i14969') }
+    let(:user) { User.create!(name: 'Roody', email: 'roody@mail.com', password: 'K@i14969') }
     before(:each) do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
     end

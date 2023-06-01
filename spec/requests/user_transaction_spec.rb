@@ -2,12 +2,12 @@ require 'rails_helper'
 
 RSpec.describe 'UserTransaction', type: :request do
   describe 'GET /index' do
-    let(:user) { User.create!(name: 'Roody', email: 'roody@mail.com',password:'K@i14969') }
+    let(:user) { User.create!(name: 'Roody', email: 'roody@mail.com', password: 'K@i14969') }
     let(:category) do
       Category.create!(
         name: 'Housing',
         icon: 'https://picsum.photos/300/300',
-        user: user
+        user:
       )
     end
 
@@ -16,7 +16,7 @@ RSpec.describe 'UserTransaction', type: :request do
         name: 'Curtains',
         amount: 200,
         author: user,
-        category: category
+        category:
       )
     end
 
@@ -53,18 +53,17 @@ RSpec.describe 'UserTransaction', type: :request do
       expect(response.body).to include('Curtains')
       expect(response.body).to include('$200.0')
     end
-
   end
 
   describe 'GET/new' do
-    let(:user) { User.create!(name: 'Roody', email: 'roody@mail.com',password:'K@i14969')}
-      let(:category) do
-        Category.create!(
-          name: 'Housing',
-          icon: 'https://picsum.photos/300/300',
-          user: user
-        )
-      end 
+    let(:user) { User.create!(name: 'Roody', email: 'roody@mail.com', password: 'K@i14969') }
+    let(:category) do
+      Category.create!(
+        name: 'Housing',
+        icon: 'https://picsum.photos/300/300',
+        user:
+      )
+    end
     before(:each) do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
     end
