@@ -86,8 +86,8 @@ production:
   adapter: postgresql
   prepared_statements: false
   advisory_locks: false
-   statement_limit: 200
-  url: <%= ENV["DATABASE_URL"] %>
+  statement_limit: 200
+  url: postgres://ks_budjet_user:i2SsEmZB85QZh1y4feoVZv1xlxgEuFW9@dpg-chsdk5jhp8u4o31nbimg-a/ks_budjet
   database: ks_budjet
   username: ks_budjet_user
   password: i2SsEmZB85QZh1y4feoVZv1xlxgEuFW9
