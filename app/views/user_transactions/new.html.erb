@@ -1,0 +1,5 @@
+<%= render "layouts/back", title: "NEW TRANSACTION", link: category_user_transactions_path(@category_id) %>
+<section class="container bg vh-100 py-2">
+<%= render "layouts/flash" %>
+<%= render "form", transaction: @transaction %>
+</section>

@@ -1,0 +1,17 @@
+<%= render "layouts/back", title: "TRANSACTIONS" ,link: "/categories"%>
+<section class="container d-flex justify-content-between py-2 rounded-circle">
+<img width="50" height="50" src="<%=@category.icon%>" alt="Card image cap">
+<p class="text-center fs-5  bg-card m-1"><%=@category.name%></p>
+<p class="text-center fs-5  bg-card m-1"><span>$<%=@total_price%></span></p> 
+</section>
+
+<section class="container  py-2 vh-100 bg">
+<%= render "layouts/flash" %>
+<% @transactions.each do |user_transaction| %>
+    <%= render user_transaction %>
+<% end %>
+
+<div class="d-flex justify-content-center mt-2">
+     <%= link_to "Add new Transaction", new_category_user_transaction_path, class: "btn btn-success" %>
+</div>
+</section>

@@ -1,0 +1,12 @@
+<section class="d-flex justify-content-between border border-1 mt-2 p-1 bg-card">
+  <div class="d-flex">
+    <%= image_tag("transaction.png", alt: "Transaction image by https://www.flaticon.com/", width: "80") %>
+    <div class="d-flex flex-column ms-3">
+      <p class="transaction"><%=user_transaction.name %></p>
+      <p class="date"><%=user_transaction.created_at.strftime("%Y-%m-%d %H:%M:%S")%></p>
+    </div>
+  </div>
+  <div class="d-flex justify-content-end ">
+    <p class="amount">$<%=user_transaction.amount %></p>
+  </div>
+</section>

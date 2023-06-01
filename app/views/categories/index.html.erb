@@ -1,0 +1,11 @@
+<%= render "layouts/navbar", title:"CATEGORIES" %>
+<section class="container bg vh-100 py-3">
+<%= render "layouts/flash" %>
+<% @categories.each_with_index do |category, i| %>
+    <%= render category, total:@totals[i] %>
+<% end %>
+
+<div class="d-flex justify-content-center mt-2">
+     <%= link_to "Add new Category", new_category_path, class: "btn btn-success" %>
+</div>
+</section>
