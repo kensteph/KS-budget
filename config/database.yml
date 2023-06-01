@@ -87,4 +87,4 @@ production:
   url: <%= ENV["DATABASE_URL"] %>
   database: ks_budjet
   username: ks_budjet_user
-  password: <%= ENV["DATABASE_PASSWORD"] %>
+  password: i2SsEmZB85QZh1y4feoVZv1xlxgEuFW9
