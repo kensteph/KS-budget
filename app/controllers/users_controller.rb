@@ -1,7 +1,3 @@
 class UsersController < ApplicationController
-
-  def splash
-    
-  end
-  
+  def splash; end
 end

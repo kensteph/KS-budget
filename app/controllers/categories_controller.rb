@@ -4,7 +4,7 @@ class CategoriesController < ApplicationController
 
   def index
     @categories = Category.where(user_id: current_user)
-    @totals=[]
+    @totals = []
     @categories.each do |category|
       @totals << total(category.id)
     end
@@ -28,12 +28,11 @@ class CategoriesController < ApplicationController
 
   private
 
-  def total(cat) 
-    total_price = UserTransaction.where(author_id:current_user,category:cat).sum(:amount)
+  def total(cat)
+    UserTransaction.where(author_id: current_user, category: cat).sum(:amount)
   end
-  
+
   def category_params
     params.require(:category).permit(:name, :icon)
   end
-
 end
